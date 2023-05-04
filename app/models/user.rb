@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   private
 
   def three_recent_posts
