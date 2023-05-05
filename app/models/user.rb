@@ -3,6 +3,11 @@ class User < ApplicationRecord
   has_many :likes, foreign_key: :author_id
   has_many :comments, foreign_key: :author_id
 
+  # Validations
+
+  validates :name, presence: true
+  validates :posts_counter, nimericality: { greater_than_or_equal_to: 0 }
+
   private
 
   def three_recent_posts
