@@ -58,10 +58,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Users_Table]**
-- **[Posts_Table]**
-- **[Likes_Table]**
-- **[Comments_Table]**
+- **[Register_users]**
+- **[Users_can_add_posts]**
+- **[Users_can_like_posts]**
+- **[Users_can_comment_posts]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -170,8 +170,10 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Model_classes]**
-- [ ] **[Associations]**
+
+- [ ] **[Add_forms]**
+- [ ] **[Add_styling_to_the_project]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
