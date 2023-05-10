@@ -17,7 +17,7 @@ RSpec.describe 'Posts controller: ', type: :request do
       end
 
       it('includes the placeholder text') do
-        expect(response.body).to include("<h1>This is a list of posts for a given user</h1>")
+        expect(response.body).to include('<h1>This is a list of posts for a given user</h1>')
       end
     end
 
