@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_04_211354) do
     t.string "name"
     t.text "photo"
     t.string "bio"
-    t.integer "post_counter"
+    t.integer "post_counter", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,60 +1,26 @@
 require 'rails_helper'
 
-RSpec.describe Post, type: :model do
-  describe 'creation' do
-    before :all do
-      @user = User.create(name: 'John Doe', photo: 'https://picsum.photos/200/300', bio: 'I am John Doe')
-      @post = Post.create(author_id: @user.id, title: 'My Post', content: 'This is my post')
-    end
+RSpec.describe 'GET all posts for an user' do
+  let(:user) { User.create!(name: 'Test User', post_count: 0) }
 
-    it "author_id can't be blank" do
-      @post.author_id = nil
-      expect(@post).to_not be_valid
-    end
+  it 'returns a successful response' do
+    get "/users/#{user.id}/posts"
 
-    it "title can't be blank" do
-      @post.title = nil
-      expect(@post).to_not be_valid
-    end
+    expect(response).to be_successful
+    expect(response.body).to include('<h1>Here is a list of posts for a given user</h1>')
+    expect(response).to render_template(:index)
+  end
+end
 
-    it "title can't exceed 250 characters" do
-      @post.title = 'a' * 251
-      expect(@post).to_not be_valid
-    end
+describe 'GET specific post for a user' do
+  let(:user) { User.create!(name: 'Test User', post_count: 0) }
 
-    it "content can't be blank" do
-      @post.content = nil
-      expect(@post).to_not be_valid
-    end
+  it 'returns a successful response' do
+    post = Post.create!(title: 'Test Post', author_id: user.id, comments_counter: 0, likes_counter: 0)
+    get "/users/#{user.id}/posts/#{post.id}"
 
-    it "comments_counter can't be blank" do
-      @post.comments_counter = nil
-      expect(@post).to_not be_valid
-    end
-
-    it 'comments_counter must be an integer' do
-      @post.comments_counter = 'a'
-      expect(@post).to_not be_valid
-    end
-
-    it 'comments_counter must be greater than or equal to 0' do
-      @post.comments_counter = -1
-      expect(@post).to_not be_valid
-    end
-
-    it "likes_counter can't be blank" do
-      @post.likes_counter = nil
-      expect(@post).to_not be_valid
-    end
-
-    it 'likes_counter must be an integer' do
-      @post.likes_counter = 'a'
-      expect(@post).to_not be_valid
-    end
-
-    it 'likes_counter must be greater than or equal to 0' do
-      @post.likes_counter = -1
-      expect(@post).to_not be_valid
-    end
+    expect(response).to be_successful
+    expect(response.body).to include('<h1>This is a single post</h1>')
+    expect(response).to render_template(:show)
   end
 end

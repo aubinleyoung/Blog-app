@@ -74,4 +74,5 @@ group :development, :test do
   gem 'rspec-rails'
 end
 gem 'pg'
+gem 'rails-controller-testing'
 gem 'rubocop', '>= 1.0', '< 2.0'
