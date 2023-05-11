@@ -28,10 +28,10 @@
             <% if post.five_recent_comments.blank? %>
               <p class="each_comment">No comments available.</p>
             <% else %>
-              <% post.last_five_comments.each do |comment| %>
+              <% post.five_recent_comments.each do |comment| %>
                 <p class="each_comment">
                   <strong><%= comment.author.name %>:</strong>
-                  <%= comment.body %>
+                  <%= comment.content %>
                 </p>
               <% end %>
             <% end %>

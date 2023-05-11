@@ -7,7 +7,7 @@
             <h4>Post #<%= @post.id %> by <%= @user.name %></h4>
             <p>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
           </div>
-          <p class="p_tags post_text"><%= @post.body %></p>
+          <p class="p_tags post_text"><%= @post.content %></p>
         </div>
       </li>
       <li class="li-box comment-box">
@@ -18,7 +18,7 @@
             <% @post.comments.each do |comment| %>
               <p class="each_comment post_show_comment">
                 <strong><%= comment.author.name %>:</strong>
-                <%= comment.body %>
+                <%= comment.content %>
               </p>
             <% end %>
           <% end %>
