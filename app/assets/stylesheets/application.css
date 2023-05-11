@@ -4,55 +4,61 @@
   font-family: Helevica, Arial, sans-serif;
   text-decoration: unset;
 }
-.title{
+
+.title {
   margin-top: 3rem;
   margin-left: 3rem;
 }
-.empty-display{
+
+.empty-display {
   text-align: center;
 }
-.users-list{
- border: 1px solid black;
- display: flex;
- flex-direction: column;
- gap: 10px;
- list-style: none;
- padding-left: 0;
- padding: 10px 10px;
- width: fit-content;
 
+.users-list {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 10px 10px 0 0;
+  width: fit-content;
 }
-.user-details{
+
+.user-details {
   width: fit-content;
   display: flex;
   gap: 10px;
-
 }
-.image-box{
+
+.image-box {
   border: 1px solid black;
   width: 10vw;
   height: 15vh;
 }
-.details-box{
+
+.details-box {
   border: 1px solid black;
   width: 20vw;
   height: 15vh;
   position: relative;
 }
-.details-box h2{
+
+.details-box h2 {
   text-decoration: none;
 }
-.details-box p{
+
+.details-box p {
   position: absolute;
   right: 0;
   bottom: 0;
   padding: 5px;
 }
-.li-box{
-border: 1px solid black;
-padding: 10px;
-}
-.button{
-  color: blue;
 
+.li-box {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.button {
+  color: blue;
 }
