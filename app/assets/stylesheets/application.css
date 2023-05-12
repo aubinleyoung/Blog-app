@@ -3,11 +3,14 @@
   padding: 0;
   font-family: Helevica, Arial, sans-serif;
   text-decoration: unset;
+
+}
+.main-content{
+background-color:rgb(225, 224, 224);
 }
 
 .title {
-  margin-top: 3rem;
-  margin-left: 3rem;
+  text-align: center;
 }
 
 .empty-display {
@@ -16,18 +19,19 @@
 
 .users-list {
   border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto ;
+ justify-content: center;
+  gap: 1vw;
   list-style: none;
-  padding: 10px 10px 0 0;
-  width: fit-content;
+  padding: 1vw 0vw 1vw 0vw;
+
 }
 
 .user-details {
-  width: fit-content;
   display: flex;
-  gap: 10px;
+  gap: 1vw;
 }
 
 .image-box {
@@ -41,11 +45,10 @@
   width: 20vw;
   height: 15vh;
   position: relative;
+  color: black;
 }
 
-.details-box h2 {
-  text-decoration: none;
-}
+
 
 .details-box p {
   position: absolute;
