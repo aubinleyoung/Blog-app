@@ -4,11 +4,10 @@
   font-family: Helevica, Arial, sans-serif;
   text-decoration: unset;
   list-style: none;
-
 }
-.main-content{
-background-color:rgb(225, 224, 224);
 
+.main-content {
+  background-color: rgb(225, 224, 224);
 }
 
 .title {
@@ -23,12 +22,11 @@ background-color:rgb(225, 224, 224);
   border: 1px solid black;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto ;
- justify-content: center;
+  grid-template-rows: auto;
+  justify-content: center;
   gap: 1vw;
   list-style: none;
-  padding: 1vw 0vw 1vw 0vw;
-
+  padding: 1vw 0 1vw 0;
 }
 
 .user-details {
@@ -49,8 +47,6 @@ background-color:rgb(225, 224, 224);
   position: relative;
   color: black;
 }
-
-
 
 .details-box p {
   position: absolute;

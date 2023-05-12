@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post= Post.new
+    @post = Post.new
   end
 
   def create
@@ -25,9 +25,10 @@ class PostsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-  private 
+
+  private
 
   def post_params
-    params.require(:post).permit(:title,:content)
+    params.require(:post).permit(:title, :content)
   end
 end
