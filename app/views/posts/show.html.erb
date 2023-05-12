@@ -1,3 +1,4 @@
+<main class="main-content">
 <h1 class="title">This is a single post</h1>
 <ul class="users-list">
   <li>
@@ -5,10 +6,15 @@
       <li class="li-box">
         <div class="inner-li-box">
           <div class="title_n_comments">
-            <h4>Post #<%= @post.id %> by <%= @user.name %></h4>
+            <h4><%= @post.id %> by <%= @user.name %></h4>
             <p>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
           </div>
           <p class="p_tags post_text"><%= @post.content %></p>
+          <div>
+          <%= form_with model: @like, url: user_post_likes_path(@user, @post) do |form|%>
+              <%= form.submit 'Like post', class: 'button like-button' %>
+          <%end%>
+        </div>
         </div>
       </li>
       <li class="li-box comment-box">
@@ -27,4 +33,9 @@
       </li>
     </ul>
   </li>
+  <li class="li-box">
+  <a href="<%= url_for(new_user_post_comment_path(@user, @post)) %>" class="button button-wide">Add Comment</a>
+
+  </li>
 </ul>
+</main>

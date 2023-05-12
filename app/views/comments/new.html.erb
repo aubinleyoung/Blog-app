@@ -1,9 +1,13 @@
-<h1>New comment</h1>
-
-<%= render "form", comment: @comment %>
-
-<br>
-
+<main class="main-content">
+<h1 class="title">Add a comment</h1>
+<ul class="users-list">
+<li class="li-box">
+<%= form_with(model: @comment, url: user_post_comments_path(@post), local: true) do |form| %>
 <div>
-  <%= link_to "Back to comments", comments_path %>
+  <%= form.text_area :content, placeholder: "Leave an comment", class: "form-text-area" %>
 </div>
+<%= form.submit "Add Comment", class: "button form-button" %>
+<% end %>
+</li>
+</ul>
+</main>

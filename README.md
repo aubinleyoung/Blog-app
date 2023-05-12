@@ -171,7 +171,7 @@ Example:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[Add_forms]**
+- [ ] **[Add_authentification_page]**
 - [ ] **[Add_styling_to_the_project]**
 
 

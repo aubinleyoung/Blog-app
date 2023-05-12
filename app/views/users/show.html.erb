@@ -1,3 +1,4 @@
+<main>
 <h1 class="title">This is single user</h1>
 <ul class="users-list">
   <li class="user-details">
@@ -27,7 +28,7 @@
         <a href="<%= url_for("/users/#{@user.id}/posts/#{post.id}") %>" >
           <li class="li-box">
             <div class="inner-li-box">
-              <h3>Post #<%= post.id %></h3>
+              <h3>Post Title: <%= post.title %></h3>
               <p class="p_tags"><%= post.content %></p>
               <div class="comments_n_likes">
                 <p>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
@@ -42,5 +43,10 @@
       </div>
     <% end %>
   </li>
+  <li class="li-box">
+
+  <a href="<%= url_for('/users/user_path/posts/new') %>" class="button button-wide">Create new post</a>
+</li>
 </ul>
+</main>
 
