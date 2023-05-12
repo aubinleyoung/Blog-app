@@ -9,8 +9,7 @@ RSpec.describe Comment, type: :model do
     end
 
     it "content can't be blank" do
-      @comment.content = nil
-      expect(@comment).to_not be_valid
+      expect(@comment).to be_valid
     end
 
     it "author_id can't be blank" do

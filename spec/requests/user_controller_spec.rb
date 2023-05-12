@@ -17,7 +17,7 @@ RSpec.describe 'UsersControllers', type: :request do
 
     it 'response body includes the correct content' do
       get '/users'
-      expect(response.body).to match('<h1>Here is a list for all users</h1>')
+      expect(response.body).to include('<h1 class="title">List of all users:</h1>')
     end
   end
 
@@ -33,7 +33,7 @@ RSpec.describe 'UsersControllers', type: :request do
     end
     it 'response body includes the correct content' do
       get user_path(@user)
-      expect(response.body).to match('<h1>This is a single user</h1>')
+      expect(response.body).to include('<h1 class="title">This is single user</h1>')
     end
   end
 end
