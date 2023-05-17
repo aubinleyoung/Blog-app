@@ -2,13 +2,13 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @user = User.find(params[:user_id])
-    @post = Post.all
+    @post = @user.posts.includes(:comments)
   end
 
   # GET /posts/1 or /posts/1.json
   def show
-    @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
+    @post = Post.includes(:comments).find(params[:id])
   end
 
   def new
