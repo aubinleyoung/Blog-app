@@ -39,7 +39,7 @@
       </ul>
       </a>
       <div class="button_div">
-        <a href="<%= url_for(user_posts_path(@user)) %>" class="button">See all posts</a>
+        <a href="<%= url_for(user_posts_path(@user.id)) %>" class="button">See all posts</a>
       </div>
     <% end %>
   </li>
