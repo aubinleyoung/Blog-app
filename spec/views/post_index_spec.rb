@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Render posts index page', type: :feature do
   before :each do
     @user = User.create(name: 'John', photo: 'https://media.gettyimages.com/id/1278139568/nl/foto/studioportret-van-20-jaar-oude-vrouw.jpg?s=612x612&w=0&k=20&c=3Bd4Ot79Z1ZKoCwAl0qFQ9hoBrQTar4SqtPefHOBEkg=',
-    bio: 'Teacher from Congo.', post_counter: 4)
+                        bio: 'Teacher from Congo.', post_counter: 4)
     @first_post = Post.create(title: 'Hello Fam', content: 'Welcome to the family',
                               comments_counter: 0, likes_counter: 0, author_id: @user.id)
     Comment.create(content: 'Hi John!', author_id: @user.id, post_id: @first_post.id)
@@ -23,7 +23,7 @@ RSpec.describe 'Render posts index page', type: :feature do
     expect(page).to have_content(@user.name)
   end
   scenario 'shows number of user posts' do
-    expect(page).to have_content("Number of posts: 1")
+    expect(page).to have_content('Number of posts: 1')
   end
   scenario 'redirects to the post show page' do
     click_link('a', match: :first)
