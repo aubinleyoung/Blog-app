@@ -175,7 +175,6 @@ Example:
 - Twitter: [@Donmark2k](https://twitter.com/donmark2k)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/chukwuemeka-ochuba/)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
