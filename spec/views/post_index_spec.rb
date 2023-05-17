@@ -47,4 +47,8 @@ RSpec.describe 'Render posts index page', type: :feature do
   scenario 'display the how many Likes' do
     expect(page).to have_content("Likes: #{@first_post.likes_counter}")
   end
+  scenario 'I can see a section for pagination if there are more posts than fit on the view.' do
+    visit user_posts_path(@user.id)
+    expect(page).to have_button('Pagination')
+  end
 end
