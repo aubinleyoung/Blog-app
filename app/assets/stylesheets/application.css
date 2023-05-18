@@ -7,7 +7,14 @@
 }
 
 .main-content {
+  position: relative;
   background-color: rgb(225, 224, 224);
+}
+
+.sign_out_btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
 .title {
@@ -27,6 +34,17 @@
   gap: 1vw;
   list-style: none;
   padding: 1vw 0 1vw 0;
+}
+
+.sign-block {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  border: 1px solid black;
+  padding: 5px;
+  align-items: center;
 }
 
 .user-details {
