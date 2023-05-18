@@ -58,6 +58,7 @@
 
 ### Key Features <a name="key-features"></a>
 
+- **[User_authentification]**
 - **[Register_users]**
 - **[Users_can_add_posts]**
 - **[Users_can_like_posts]**
@@ -182,7 +183,6 @@ Example:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[Add_authentification_page]**
 - [ ] **[Add_styling_to_the_project]**
 
 
