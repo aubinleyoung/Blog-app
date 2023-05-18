@@ -1,16 +1,23 @@
 <main class="main-content">
+
 <% if @users.blank? %>
   <div class="empty-display">
     <p class="p_tags inner-li-box">There are no users available.</p>
   </div>
 <% else %>
+<div class="sign_out_btn">
+  <button>
+    <%= link_to 'Sign out',  destroy_user_session_path, method: :delete %>
+  </button>
+</div>
 <h1 class="title">List of all users:</h1>
+
   <ul class="users-list">
     <% @users.each do |user| %>
     <a href="<%= url_for(user_path(user)) %>" >
       <li class="user-details">
         <div class="image-box">
-            <%= image_tag(user.photo, class: "user-image") %>
+         
         </div>
         <div class="details-box">
             <h2><%= user.name %></h2>
