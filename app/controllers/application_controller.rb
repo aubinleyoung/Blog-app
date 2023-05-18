@@ -7,4 +7,5 @@ class ApplicationController < ActionController::Base
     attributes = %i[name photo bio]
     devise_parameter_sanitizer.permit(:sign_up, keys: attributes)
     devise_parameter_sanitizer.permit(:account_update, keys: attributes)
+  end
 end
