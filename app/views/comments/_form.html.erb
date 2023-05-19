@@ -1,17 +1,12 @@
-<%= form_with(model: comment) do |form| %>
-  <% if comment.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
-      <ul>
-        <% comment.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+<p><span>Username:</span><%=comment.author.name %>
+<span>Comment:</span><%=comment.text %>
+<% if can? :destroy, comment %>
+<turbo-frame id="comment-frame">
+<%= turbo_frame_tag 'comment-frame' do %>
+  <%= form_with url: user_post_comment_path(@user, comment.post, comment.id), method: :delete, data: { turbo_frame: '_top' } do |form| %>
+    <%= form.submit 'X', data: { turbo_confirm: "Are you sure?" } %>
   <% end %>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>
+</turbo-frame>
+<% end %>
+</p>

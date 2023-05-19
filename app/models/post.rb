@@ -17,4 +17,8 @@ class Post < ApplicationRecord
   def five_recent_comments
     comments.order(created_at: :desc).limit(5)
   end
+  def decrement_user_post_counter
+    author.decrement!(:postscounter)
+  end
+  private :update_posts_counter, :decrement_user_post_counter
 end

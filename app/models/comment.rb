@@ -3,8 +3,13 @@ class Comment < ApplicationRecord
   belongs_to :author, class_name: 'User'
 
   after_save :update_comments_counter
+  after_destroy :decrement_post_comment_counter
 
   def update_comments_counter
     post.update(comments_counter: post.comments.count)
+  end
+  
+  def decrement_post_comment_counter
+    post.decrement!(:commentscounter)
   end
 end

@@ -38,5 +38,17 @@
   <a href="<%= url_for(new_user_post_comment_path(@user, @post)) %>" class="button button-wide">Add Comment</a>
 
   </li>
+  <div class="button_holder">
+<% if can? :destroy, @post%>
+  <button>
+    <%= link_to 'Delete post', user_post_path(@user,@post), data: {
+                turbo_method: :delete,
+                turbo_confirm: "Are you sure?"
+              } %>
+  </button>
+<% end %>
+</div>
 </ul>
 </main>
+
+

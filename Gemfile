@@ -73,6 +73,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
 end
+gem 'cancancan'
 gem 'devise'
 gem 'pg'
 gem 'rails-controller-testing'
